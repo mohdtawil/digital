@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mt-4">Movies App</h1>
+        </div>
+        <!-- <p>{{formData.value | json}}</p>
+        <p>{{movies.results | json}}</p> -->
+        <div class="col-12">
+            <form [formGroup]="formData">
+            <div class="row ">
+                <div class="col-4">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Choose movie type</mat-label>
+                        <mat-select formControlName="type" >
+                        <mat-option value="upcoming" >Upcoming</mat-option>
+                        <mat-option value="top_rated">Top Rated</mat-option>
+                        <mat-option value="popular">Popular</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-5 md-6">
+                    <mat-form-field class="example-full-width w-100" appearance="outline">
+                        <mat-label>Search for awesome movies</mat-label>
+                        <input  matInput placeholder="Search" formControlName="searchQuery" >
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div class="col-12">
+            <app-movies [movies]="movies.results"></app-movies>
+        </div>
+    </div>
+</div>

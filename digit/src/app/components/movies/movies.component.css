@@ -1,0 +1,30 @@
+.movieContainer {
+    border-radius: 15px;
+    position: relative;
+}
+img {
+    border-radius: 15px;
+}
+h3 {
+    font-family: 'Rubik';
+    font-weight: bold;
+}
+.date {
+    color: lightgray;
+}
+.rate {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(136, 228, 136);
+    border-radius: 50%;
+    color: #fff;
+    line-height: 0;
+    font-weight: bold;
+}
