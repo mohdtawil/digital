@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MoviesComponent } from 'src/app/components/movies/movies.component';
-import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-home',
@@ -208,9 +207,7 @@ export class HomeComponent implements OnInit {
   formData: FormGroup = new FormGroup({});
   movies: any;
   constructor(
-    private formBuilder: FormBuilder,
-    private movieService: MovieService
-
+    private formBuilder: FormBuilder
   ) { }
 
    populateFormData() {
