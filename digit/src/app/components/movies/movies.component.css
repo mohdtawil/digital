@@ -28,3 +28,7 @@ h3 {
     line-height: 0;
     font-weight: bold;
 }
+.type {
+    color: #303030;
+    text-transform: capitalize;
+}

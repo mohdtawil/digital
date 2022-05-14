@@ -5,6 +5,7 @@
             <img class="w-100" *ngIf="movie.poster_path != null" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="">
             <h3 class="mt-2 mb-0 px-2">{{movie.original_title}}</h3>
             <p class="mb-0 px-2 date">{{movie.release_date}}</p>
+            <p class="mb-2 px-2 type">{{movie.type.replace('_', ' ')}}</p>
             <div class="rate">
                 {{movie.vote_average}}
             </div>

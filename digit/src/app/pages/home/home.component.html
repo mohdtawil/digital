@@ -12,6 +12,7 @@
                     <mat-form-field class="w-100" appearance="outline">
                         <mat-label>Choose movie type</mat-label>
                         <mat-select formControlName="type" >
+                        <mat-option value="all" >All</mat-option>
                         <mat-option value="upcoming" >Upcoming</mat-option>
                         <mat-option value="top_rated">Top Rated</mat-option>
                         <mat-option value="popular">Popular</mat-option>
@@ -21,14 +22,14 @@
                 <div class="col-lg-5 md-6">
                     <mat-form-field class="example-full-width w-100" appearance="outline">
                         <mat-label>Search for awesome movies</mat-label>
-                        <input  matInput placeholder="Search" formControlName="searchQuery" >
+                        <input  matInput placeholder="Search" formControlName="searchQuery" (input)="onSearchChange($event.target)" >
                     </mat-form-field>
                 </div>
             </div>
         </form>
         </div>
         <div class="col-12">
-            <app-movies [movies]="movies.results"></app-movies>
+            <app-movies [movies]="movies"></app-movies>
         </div>
     </div>
 </div>
